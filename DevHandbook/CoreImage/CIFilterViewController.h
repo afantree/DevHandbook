@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface CIFilterViewController : UIViewController<UITableViewDataSource,UITableViewDelegate>
+@interface CIFilterViewController : UIViewController
 {
     UITextView         *_mainTextView;
 }

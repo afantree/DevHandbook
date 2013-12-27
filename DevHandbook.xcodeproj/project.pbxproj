@@ -22,6 +22,10 @@
 		EB74776A184F398400853A0D /* CIViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EB747769184F398400853A0D /* CIViewController.m */; };
 		EBB159B61862BCA400CAC4D8 /* CIFilterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EBB159B51862BCA300CAC4D8 /* CIFilterViewController.m */; };
 		EBB159B91862BEA700CAC4D8 /* CIDemoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EBB159B81862BEA700CAC4D8 /* CIDemoViewController.m */; };
+		EBCDE2F4186D2A6D001ADC0C /* CoreMotionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EBCDE2F3186D2A6D001ADC0C /* CoreMotionViewController.m */; };
+		EBCDE2F6186D2ABB001ADC0C /* CoreMotionViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EBCDE2F5186D2ABB001ADC0C /* CoreMotionViewController.xib */; };
+		EBCDE2F8186D2C68001ADC0C /* CoreMotion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EBCDE2F7186D2C68001ADC0C /* CoreMotion.framework */; };
+		EBCDE2FA186D6371001ADC0C /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = EBCDE2F9186D6371001ADC0C /* README.md */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -49,6 +53,11 @@
 		EBB159B51862BCA300CAC4D8 /* CIFilterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CIFilterViewController.m; path = CoreImage/CIFilterViewController.m; sourceTree = "<group>"; };
 		EBB159B71862BEA700CAC4D8 /* CIDemoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CIDemoViewController.h; path = CoreImage/CIDemoViewController.h; sourceTree = "<group>"; };
 		EBB159B81862BEA700CAC4D8 /* CIDemoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CIDemoViewController.m; path = CoreImage/CIDemoViewController.m; sourceTree = "<group>"; };
+		EBCDE2F2186D2A6D001ADC0C /* CoreMotionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CoreMotionViewController.h; path = CoreMotion/CoreMotionViewController.h; sourceTree = "<group>"; };
+		EBCDE2F3186D2A6D001ADC0C /* CoreMotionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CoreMotionViewController.m; path = CoreMotion/CoreMotionViewController.m; sourceTree = "<group>"; };
+		EBCDE2F5186D2ABB001ADC0C /* CoreMotionViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = CoreMotionViewController.xib; path = CoreMotion/CoreMotionViewController.xib; sourceTree = "<group>"; };
+		EBCDE2F7186D2C68001ADC0C /* CoreMotion.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMotion.framework; path = System/Library/Frameworks/CoreMotion.framework; sourceTree = SDKROOT; };
+		EBCDE2F9186D6371001ADC0C /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +65,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EBCDE2F8186D2C68001ADC0C /* CoreMotion.framework in Frameworks */,
 				EB747766184F395D00853A0D /* CoreImage.framework in Frameworks */,
 				EB4F482C1846066900ADBCB1 /* UIKit.framework in Frameworks */,
 				EB4F482E1846066900ADBCB1 /* Foundation.framework in Frameworks */,
@@ -69,6 +79,7 @@
 		EB4F481F1846066900ADBCB1 = {
 			isa = PBXGroup;
 			children = (
+				EBCDE2F9186D6371001ADC0C /* README.md */,
 				EB4F48311846066900ADBCB1 /* DevHandbook */,
 				EB4F482A1846066900ADBCB1 /* Frameworks */,
 				EB4F48291846066900ADBCB1 /* Products */,
@@ -86,6 +97,7 @@
 		EB4F482A1846066900ADBCB1 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				EBCDE2F7186D2C68001ADC0C /* CoreMotion.framework */,
 				EB747765184F395D00853A0D /* CoreImage.framework */,
 				EB4F482B1846066900ADBCB1 /* UIKit.framework */,
 				EB4F482D1846066900ADBCB1 /* Foundation.framework */,
@@ -97,6 +109,7 @@
 		EB4F48311846066900ADBCB1 /* DevHandbook */ = {
 			isa = PBXGroup;
 			children = (
+				EBCDE2F1186D2A57001ADC0C /* CoreMotion */,
 				EB747767184F397100853A0D /* CoreImage */,
 				EB747761184F2C5100853A0D /* Font */,
 				EB4F483A1846066900ADBCB1 /* AppDelegate.h */,
@@ -142,6 +155,16 @@
 				EBB159B81862BEA700CAC4D8 /* CIDemoViewController.m */,
 			);
 			name = CoreImage;
+			sourceTree = "<group>";
+		};
+		EBCDE2F1186D2A57001ADC0C /* CoreMotion */ = {
+			isa = PBXGroup;
+			children = (
+				EBCDE2F2186D2A6D001ADC0C /* CoreMotionViewController.h */,
+				EBCDE2F3186D2A6D001ADC0C /* CoreMotionViewController.m */,
+				EBCDE2F5186D2ABB001ADC0C /* CoreMotionViewController.xib */,
+			);
+			name = CoreMotion;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -195,8 +218,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EBCDE2FA186D6371001ADC0C /* README.md in Resources */,
 				EB4F48361846066900ADBCB1 /* InfoPlist.strings in Resources */,
 				EB4F483E1846066900ADBCB1 /* Default.png in Resources */,
+				EBCDE2F6186D2ABB001ADC0C /* CoreMotionViewController.xib in Resources */,
 				EB4F48401846066900ADBCB1 /* Default@2x.png in Resources */,
 				EB4F48421846066900ADBCB1 /* Default-568h@2x.png in Resources */,
 			);
@@ -212,6 +237,7 @@
 				EB4F48381846066900ADBCB1 /* main.m in Sources */,
 				EB4F483C1846066900ADBCB1 /* AppDelegate.m in Sources */,
 				EB747760184F287700853A0D /* RootViewController.m in Sources */,
+				EBCDE2F4186D2A6D001ADC0C /* CoreMotionViewController.m in Sources */,
 				EB747764184F2C5100853A0D /* FontViewController.m in Sources */,
 				EB74776A184F398400853A0D /* CIViewController.m in Sources */,
 				EBB159B61862BCA400CAC4D8 /* CIFilterViewController.m in Sources */,
