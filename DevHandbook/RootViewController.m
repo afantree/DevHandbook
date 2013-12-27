@@ -90,9 +90,9 @@
 	if (cell == nil) {
 		cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:identifier];
         cell.selectionStyle = UITableViewCellSelectionStyleBlue;
-        cell.accessoryType=UITableViewCellAccessoryNone;
+        cell.accessoryType=UITableViewCellAccessoryDisclosureIndicator;
 	}
-	cell.textLabel.text = _mainArray[indexPath.row];
+	cell.textLabel.text = [NSString stringWithFormat:@"%d.%@",indexPath.row+1,_mainArray[indexPath.row]];
     return cell;
 }
 @end
