@@ -15,8 +15,13 @@
 @end
 
 @implementation ButtonRespViewController
-
+-(void)returnBack
+{
+    [self.navigationController popViewControllerAnimated:YES];
+}
 - (void)viewDidLoad {
+    UIBarButtonItem* bi=[[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemDone target:self action:@selector(returnBack)];
+    self.navigationItem.leftBarButtonItem=bi;
     [super viewDidLoad];
     self.navigationItem.title=@"按钮响应事件";
     // Do any additional setup after loading the view from its nib.

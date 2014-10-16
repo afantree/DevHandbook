@@ -10,6 +10,7 @@
 #import "FontViewController.h"
 #import "CIViewController.h"
 #import "ButtonRespViewController.h"
+#import "CoreMotionViewController.h"
 @interface RootViewController ()
 
 @end
@@ -31,7 +32,7 @@
 	// Do any additional setup after loading the view.
     self.title = @"系统原生设置参考";
     
-    _mainArray = [[NSArray alloc] initWithObjects:@"所有字体",@"所有滤镜",@"按钮响应事件", nil];
+    _mainArray = [[NSArray alloc] initWithObjects:@"所有字体",@"所有滤镜",@"重力感应",@"按钮响应事件", nil];
     //铺上tableVIew
     _mainTableView=[[UITableView alloc] initWithFrame:CGRectMake(0, 0, 320, self.view.bounds.size.height) style:UITableViewStyleGrouped];
     _mainTableView.delegate=self;
@@ -75,10 +76,19 @@
         }
         case 2:
         {
+            CoreMotionViewController* cmvc = [[CoreMotionViewController alloc] initWithNibName:@"CoreMotionViewController" bundle:[NSBundle mainBundle]];
+            [self.navigationController pushViewController:cmvc animated:YES];
+            break;
+        }
+        case 3:
+        {
             ButtonRespViewController* bvc = [ButtonRespViewController new];
             [self.navigationController pushViewController:bvc animated:YES];
             break;
         }
+            break;
+        
+            break;
         default:
             break;
     }
@@ -90,9 +100,9 @@
 	if (cell == nil) {
 		cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:identifier];
         cell.selectionStyle = UITableViewCellSelectionStyleBlue;
-        cell.accessoryType=UITableViewCellAccessoryNone;
+        cell.accessoryType=UITableViewCellAccessoryDisclosureIndicator;
 	}
-	cell.textLabel.text = _mainArray[indexPath.row];
+	cell.textLabel.text = [NSString stringWithFormat:@"%d.%@",indexPath.row+1,_mainArray[indexPath.row]];
     return cell;
 }
 @end
