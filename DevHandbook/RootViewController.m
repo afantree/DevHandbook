@@ -9,6 +9,7 @@
 #import "RootViewController.h"
 #import "FontViewController.h"
 #import "CIViewController.h"
+#import "ButtonRespViewController.h"
 @interface RootViewController ()
 
 @end
@@ -30,7 +31,7 @@
 	// Do any additional setup after loading the view.
     self.title = @"系统原生设置参考";
     
-    _mainArray = [[NSArray alloc] initWithObjects:@"所有字体",@"所有滤镜", nil];
+    _mainArray = [[NSArray alloc] initWithObjects:@"所有字体",@"所有滤镜",@"按钮响应事件", nil];
     //铺上tableVIew
     _mainTableView=[[UITableView alloc] initWithFrame:CGRectMake(0, 0, 320, self.view.bounds.size.height) style:UITableViewStyleGrouped];
     _mainTableView.delegate=self;
@@ -70,6 +71,13 @@
         {
             CIViewController* cvc = [CIViewController new];
             [self.navigationController pushViewController:cvc animated:YES];
+            break;
+        }
+        case 2:
+        {
+            ButtonRespViewController* bvc = [ButtonRespViewController new];
+            [self.navigationController pushViewController:bvc animated:YES];
+            break;
         }
         default:
             break;
