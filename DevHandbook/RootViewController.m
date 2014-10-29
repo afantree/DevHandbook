@@ -102,7 +102,7 @@
         cell.selectionStyle = UITableViewCellSelectionStyleBlue;
         cell.accessoryType=UITableViewCellAccessoryDisclosureIndicator;
 	}
-	cell.textLabel.text = [NSString stringWithFormat:@"%d.%@",indexPath.row+1,_mainArray[indexPath.row]];
+	cell.textLabel.text = [NSString stringWithFormat:@"%ld.%@",indexPath.row+1,_mainArray[indexPath.row]];
     return cell;
 }
 @end
